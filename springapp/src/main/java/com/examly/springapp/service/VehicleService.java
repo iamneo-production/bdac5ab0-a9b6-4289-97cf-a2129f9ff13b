@@ -32,7 +32,8 @@ public class VehicleService {
 
     public Vehicle saveVehicle(Long vehicleId, Vehicle vehicledetails){
         Vehicle vehicle=vehiclerepo.findById(vehicleId).orElseThrow(() -> new NoSuchElementException("Vehicle does not exist with id : "+vehicleId));
-        vehicle.setVehicleID(vehicledetails.getVehicleID());
+
+        vehicle.setVehicleId(vehicledetails.getVehicleId());
         vehicle.setVehicleName(vehicledetails.getVehicleName());
         vehicle.setVehicleAvailableTiming(vehicledetails.getVehicleAvailableTiming());
         vehicle.setVehicleAddress(vehicledetails.getVehicleAddress());
@@ -48,7 +49,8 @@ public class VehicleService {
 
     public Vehicle editVehicle(Long vehicleId, Vehicle vehicledetails){
         Vehicle vehicle=vehiclerepo.findById(vehicleId).orElseThrow(() -> new NoSuchElementException("Vehicle does not exist with id : "+vehicleId));
-        vehicle.setVehicleID(vehicledetails.getVehicleID());
+
+        vehicle.setVehicleId(vehicledetails.getVehicleId());
         vehicle.setVehicleName(vehicledetails.getVehicleName());
         vehicle.setVehicleAvailableTiming(vehicledetails.getVehicleAvailableTiming());
         vehicle.setVehicleAddress(vehicledetails.getVehicleAddress());

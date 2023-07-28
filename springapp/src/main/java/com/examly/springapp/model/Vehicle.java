@@ -18,7 +18,7 @@ public class Vehicle {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "vehicle_id")
-    private Long vehicleID;
+    private Long vehicleId;
 
     // @NotEmpty
     // @Size(min=5, message = "Vehicle name should have atleast 5 characters")
@@ -48,12 +48,12 @@ public class Vehicle {
     private String vehicleDescription;
 
 
-    public Long getVehicleID() {
-        return vehicleID;
+    public Long getVehicleId() {
+        return vehicleId;
     }
 
-    public void setVehicleID(Long vehicleID) {
-        this.vehicleID = vehicleID;
+    public void setVehicleId(Long vehicleId) {
+        this.vehicleId = vehicleId;
     }
 
     public String getVehicleName() {
@@ -123,7 +123,7 @@ public class Vehicle {
     @Override
     public String toString() {
         return "Vehicle{" +
-                "vehicleId=" + vehicleID +
+                "vehicleId=" + vehicleId +
                 ", vehicleName='" + vehicleName + '\'' +
                 ", vehicleAvailableTiming='" + vehicleAvailableTiming + '\'' +
                 ", vehicleCity='" + vehicleAddress + '\'' +

@@ -9,7 +9,7 @@
            
     <div class="register-box login-bg">
          <div class="id-box">
-             <input name="userType" class="adim-user-ID" type="text" id="admin_user" placeholder="Enter Admin/User" [(ngModel)]="dataBase.userRole" formControlName="userType">
+             <input name="userType" class="adim-user-ID" type="text" id="admin_user" placeholder="Enter Admin/User" value="user" [(ngModel)]="dataBase.userRole" formControlName="userType">
              <small class="text-danger" *ngIf="!userType.valid && (userType.touched || userType.dirty)">
                  <small class="text-danger" *ngIf="userType.errors?.required">
                      ID Required*

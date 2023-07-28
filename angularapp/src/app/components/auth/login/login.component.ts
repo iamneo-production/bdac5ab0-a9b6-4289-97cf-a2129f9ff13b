@@ -14,10 +14,12 @@ import { AuthService } from '../auth.service';
 export class LoginComponent implements OnInit {
 
   loginPage:FormGroup|any;
-  userT:any
-
   loginModel: login = new login();
-  constructor(private _http:HttpClient, private _route:Router, private auth:AuthService, private log:LoginauthService) { }
+
+  // userT:any
+  // logg!: boolean;
+  // public usId! :number;
+  constructor(private _route:Router, private auth:AuthService, private log:LoginauthService) { }
 
   ngOnInit(): void {
     
@@ -27,8 +29,6 @@ export class LoginComponent implements OnInit {
     }) 
   }
 
-  logg!: boolean;
-  public usId! :number;
 
   onSubmit(){
     this.loginModel=this.loginPage.value;

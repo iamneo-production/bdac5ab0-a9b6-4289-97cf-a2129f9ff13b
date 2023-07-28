@@ -3,6 +3,7 @@ import { bookingDetails } from '../../datatypes';
 import { Router } from '@angular/router';
 import { BookingdetailsService } from '../userservices/bookingdetails.service';
 import { AuthService } from '../../auth/auth.service';
+import { AddpassengersService } from '../userservices/addpassengers.service';
 
 @Component({
   selector: 'app-userbookings',
@@ -13,7 +14,7 @@ export class UserbookingsComponent implements OnInit {
 
   getBookings!: bookingDetails[];
   public i=0;
-  constructor(private book: BookingdetailsService,private router:Router,private auth:AuthService ){}
+  constructor(private book: BookingdetailsService,private addp:AddpassengersService, private router:Router,private auth:AuthService ){}
 
   ngOnInit(): void{
     this.displayUser();
@@ -36,5 +37,15 @@ export class UserbookingsComponent implements OnInit {
     this.router.navigate(['user/payment',id]);
   }
   
-
+  deleteBooking(id:number){
+    console.log(id);
+    this.book.deleteBooking(id).subscribe((data:any) =>{
+      alert("Booking Deleted Successfully");
+      this.addp.deletePassenger(id).subscribe((data:any)=>{
+        console.log("Deleted Passengers also");
+      })
+      this.router.navigate(['/user/myBooking']);
+    })
+  
+  }
 }

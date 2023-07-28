@@ -27,10 +27,12 @@ export class AdminvehicleprofileComponent implements OnInit {
   }
 
   editVehicle(id:number){
+    console.log(typeof(id))
     this.router.navigate(['admin/admin-editbooking', id]);
   }
   
   deleteVehicle(id:number){
+    console.log(typeof(id))
     this.addvehicleService.deleteVehicle(id).subscribe(data =>{
       this.displayUser();
     })

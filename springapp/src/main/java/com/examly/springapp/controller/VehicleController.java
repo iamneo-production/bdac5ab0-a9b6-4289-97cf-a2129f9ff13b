@@ -51,6 +51,8 @@ public class VehicleController {
 
     @GetMapping("/admin/vehicle/{vehicleId}")
     public Optional<Vehicle> getVehicleById(@PathVariable Long vehicleId){
+        System.out.println(vehicleId.getClass());
+        //long vehicleId = Long.parseLong(id);
         return vehicleService.getVehicleById(vehicleId);
     }
 
@@ -63,12 +65,14 @@ public class VehicleController {
 
     @PutMapping("/admin/editVehicle/{vehicleId}")
     public Vehicle editVehicle(@PathVariable Long vehicleId,@RequestBody Vehicle vehicledetails){
+        System.out.println(vehicleId.getClass());
         return vehicleService.editVehicle(vehicleId,vehicledetails);
     }
 
     
     @DeleteMapping("/admin/deleteVehicle/{vehicleId}")
     public void deleteVehicle(@PathVariable Long vehicleId) {
+        System.out.println(vehicleId.getClass());
         vehicleService.deleteVehicle(vehicleId);
     }
 
@@ -81,7 +85,7 @@ public class VehicleController {
     
     @PutMapping("/admin/productEdit")
     public Vehicle editVehicleById(@RequestParam("vehicleID") Long vehicleID,@RequestBody Vehicle vehicle){
-
+        System.out.println(vehicleID.getClass());
         return vehicleService.editVehicle(vehicleID,vehicle);
     }
 

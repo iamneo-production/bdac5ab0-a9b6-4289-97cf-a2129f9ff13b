@@ -67,16 +67,6 @@ export class EditbookingComponent implements OnInit {
     console.log(this.totalHours," ",this.bookingDetails.totalPrice," ",this.bookingDetails.noOfPersons," ",this.vehicles.price);
 }
 
-  deleteBooking(id:number){
-    console.log(id);
-    this.booking.deleteBooking(id).subscribe((data:any) =>{
-      alert("Booking Deleted Successfully");
-      this.addp.deletePassenger(id).subscribe((data:any)=>{
-        console.log("Deleted Passengers also");
-      })
-      this.route.navigate(['/user/myBooking']);
-    })
   
-  }
 
 }

@@ -31,6 +31,7 @@ export class AdddetailsComponent implements OnInit {
   }
   
   addUser(){
+    console.log(this.vehicles)
     this.addvehicleService.saveVehicle(this.vehicles).subscribe((data:any) =>{
       console.log(data);
       this.goToAddvehicleList();
