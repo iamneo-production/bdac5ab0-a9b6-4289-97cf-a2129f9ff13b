@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="box">
+        <h1><u>My Profile</u></h1>
+        <br><br>
+        <div class="body"   >
+			<form [formGroup]="editProfile" (submit)="onSubmit()">
+            <div >
+					<label for="name">First Name : </label>
+			<input type="text" placeholder="{{profileModel.fname}}" [(ngModel)]="profileModel.fname" formControlName="fname">
+			</div>
+			<br>
+			<div >
+				<label for="name">Last Name : </label>
+		<input type="text" placeholder="{{profileModel.lname}}"  [(ngModel)]="profileModel.lname" formControlName="lname">
+		</div>
+			<br>
+			<div >
+				<label for="email">E-Mail Id : </label>
+				<input type="email" disabled placeholder="{{profileModel.email}}">
+			</div>
+			<br>
+			<div >
+				<label for="username">Username : </label>
+				<input type="text" placeholder="{{profileModel.username}}"  [(ngModel)]="profileModel.username" formControlName="username">
+			</div>
+			<br>
+			<div >
+				<label for="mobile number">Mobile Number : </label>
+				<input type="number" placeholder="{{profileModel.mobileNumber}}"  [(ngModel)]="profileModel.mobileNumber" formControlName="mobileNumber">
+			</div>
+			<br>
+			<label for="gender">Gender : </label>
+			<input type="text" name="" id="" formControlName="gender"  [(ngModel)]="profileModel.gender" >
+			<br><br>
+			<label for="dob">DOB : </label>
+			<input type="date" id="date" oninput="date.value.toString()" [(ngModel)]="profileModel.dOB" formControlName="dOB">
+			<br><br>
+        
+		<button mat-raised-button color="primary"  >Submit</button>
+	
+            </form>
+		
+</div>

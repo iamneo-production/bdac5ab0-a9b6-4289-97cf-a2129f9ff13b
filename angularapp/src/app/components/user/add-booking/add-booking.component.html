@@ -1,0 +1,62 @@
+<body id="dashBoardBody">
+        
+    <div class="container" id="dsgrid1" *ngIf="flag">
+      <div class="availability">Available</div>
+      <div class="title">{{vehicles.vehicleName}}</div>
+      <div class="place">Place: {{vehicles.vehicleAddress}}</div>
+      <div class="content">
+        <form #addBooking="ngForm">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">From Date</span>
+              <input type="date" id="fillFromDate" min="{{currentDate|date:'yyyy-MM-dd'}}" [(ngModel)]="bookings.fromDate" name="fromDate" placeholder="Enter from date" required>
+            </div>
+            <div class="input-box">
+              <span class="details">To Date</span>
+              <input type="date" id="fillToDate" min="{{bookings.fromDate|date:'yyyy-MM-dd'}}" [(ngModel)]="bookings.toDate" name="toDate" placeholder="Enter to date" required>
+            </div>
+            <div class="input-box">
+              <span class="details">Start Time</span>
+              <input type="time" id="startTime" [(ngModel)]="bookings.startTime" name="startTime" placeholder="Enter start time" required>
+            </div>
+            <div class="input-box">
+              <span class="details">End Time</span>
+              <input type="time" id="endTime" [(ngModel)]="bookings.endTime" name="endTime" placeholder="Enter end time" required>
+            </div>
+            <div class="input-box">
+              <span class="details">No. of persons</span>
+              <input type="number" min="1" id="enterNoTicket" [(ngModel)]="bookings.noOfPersons" name="noOfPersons" placeholder="Enter no. of persons" (change)="calculatePrice()" required>
+            </div>
+            <div class="input-box">
+              <div class="details1">Price : {{bookings.totalPrice}}</div>
+              
+            </div>
+          </div>
+          <div class="button">
+            <button type="button" value="Book" (click)="submit(addBooking.value)" id="bookButton">Book</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+        <div id="dsgrid2" *ngIf="!flag">
+          <div class="non-availability">Booked</div>
+          <div>
+            <div class="title">{{vehicles.vehicleName}}</div>
+            <p>Place: {{vehicles.vehicleCity}}</p>
+            <div>
+                <div class="dup"> <span>From :</span>{{booked.fromDate | date: 'dd/MM/yyyy'}}</div>
+                <div class="dup"> <span>To :</span>{{booked.toDate| date: 'dd/MM/yyyy'}}</div>
+            </div>
+            <div>
+              <div class="dup"><span>Start Time :</span>{{booked.startTime}}</div>
+              <div class="dup"><span>End Time :</span>{{booked.endTime}}</div>
+            </div>
+            <div>
+                <div class="dup"><span>No. of Persons : </span>{{booked.noOfPersons}}</div>
+                <div class="dup"><span>Price : </span>{{booked.totalPrice}}</div>
+            </div>
+        </div>
+        </div>   
+  
+  </body>

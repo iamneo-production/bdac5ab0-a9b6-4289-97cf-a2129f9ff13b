@@ -1,0 +1,19 @@
+
+<br><br><h1 style="text-align: center; font-size:xx-large;" >Welcome to Sea Senora!</h1><br>
+<app-searchbar (searchTextChanged)="onSearchTextEntered($event)"></app-searchbar>
+<br><br> 
+
+
+<div class="container" id="grid{{i+1}}" *ngFor="let boat of boatList | filter: searchText; index as i "   >
+    <div class="card"  >
+      <div class="card-image"><img src="{{boat.vehicleUrl}}" style="width:100%"></div>
+          <h1 style="font-size: x-large;">  {{boat.vehicleName}} </h1>
+          <p id="">Place: {{boat.vehicleCity}}</p>
+          <p class="price">Price: {{boat.vehiclePrice}} per hour</p>
+          <p>{{boat.vehicleDescription}}</p> <br>
+          <button class="button-class" type="submit" (click)="submit(boat.vehicleId)" >Book</button><br>
+    </div>
+</div>
+
+
+

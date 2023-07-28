@@ -1,0 +1,136 @@
+/* table {
+  border-radius: 15px;
+  margin: 40px;
+  width: 400px;
+  height:225px;
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+img{
+  border-radius: 15px 15px 1px 1px;
+  border:1px solid black;
+  height: 225px;
+  width:400px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+figcaption{
+  border-radius: 1px 1px 15px 15px;
+  background-color: black;
+  height: 225px;
+  width: 400px;
+  color:white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+td,svg{
+  display: inline;
+  column-gap: 5px;
+  color:white;
+  text-align-last: right;
+} */
+
+/* table {
+  border-radius: 15px;
+  margin: 40px;
+  width: 390px;
+  height:225px;
+  display: grid;
+  margin-left: 10px;
+  margin-right: 10px;
+  grid:auto/auto auto auto;
+  grid-gap:8px;
+}
+
+img{
+  border-radius: 15px 15px 1px 1px;
+  border:1px solid black;
+  height: 225px;
+  width:390px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+figcaption{
+  border-radius: 1px 1px 15px 15px;
+  background-color: black;
+  height: 225px;
+  width: 390px;
+  color:white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+*/
+svg{
+    display: inline;
+    /* column-gap: 5px; */
+    color:white;
+    text-align-last: right;
+  } 
+  
+  /* ------------------- */
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  
+  }
+  
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card-image{
+    background-size: cover;
+    height: 190px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+  }
+  .card{
+    border-color: black;
+    background-color: black;
+    color:white;
+    width: 270px;
+    margin: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: inline;
+  }
+  
+  .button-class1{
+    background-color: black; 
+    color: white;
+    align-items: center;
+    width: 0px;
+      margin-left: 0%;
+      margin-top: 5px;
+    /* display: inline; */
+  }
+      
+  
+  .button-class2{
+    background-color: black; 
+    /* color: white; */
+    align-items: center;
+    width: 0px;
+      margin-left: 13%;
+      margin-top: 35px;
+      margin-bottom: 30px
+    /* display: inline; */
+  }
+  
+  .button{
+    display: inline;
+  }
+  /*------------------*/
+  

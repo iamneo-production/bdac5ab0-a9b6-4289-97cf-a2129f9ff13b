@@ -1,0 +1,78 @@
+<body>
+    
+    <div class="container">
+        <div class="header">
+        <h1>Register</h1>
+        </div>
+        <div class="main">
+<form [formGroup]="registerPage" (submit)="onSubmit()">
+           
+    <div class="register-box login-bg">
+         <div class="id-box">
+             <input name="userType" class="adim-user-ID" type="text" id="admin_user" placeholder="Enter Admin/User" [(ngModel)]="dataBase.userRole" formControlName="userType">
+             <small class="text-danger" *ngIf="!userType.valid && (userType.touched || userType.dirty)">
+                 <small class="text-danger" *ngIf="userType.errors?.required">
+                     ID Required*
+                 </small>
+             </small>
+         </div>
+
+         <div class="email-box">
+             <input name="email" class="email" type="email" id="email" placeholder="Enter Email" [(ngModel)]="dataBase.email" formControlName="email">
+             <small class="text-danger" *ngIf="!email.valid && (email.touched || email.dirty)">
+                 <small class="text-danger" *ngIf="email.errors?.required">
+                     Email is Required*
+                 </small>
+                 <small class="text-danger" *ngIf="email.errors?.email">
+                     Email is invalid*
+                 </small>
+             </small>
+         </div>
+         
+         <div class="name-box">
+             <input name="userName" class="username" type="text" id="username" placeholder="Enter Username" [(ngModel)]="dataBase.username" formControlName="username">
+             <small class="text-danger" *ngIf="!userName.valid&&(userName.touched||userName.dirty)">
+                 Username required*
+             </small>
+         </div>
+
+         <div class="num-box">
+             <input name="mobileNumber" class="ph-number" type="text" id="mobileNumber" placeholder="Enter Mobile Number" [(ngModel)]="dataBase.mobileNumber" formControlName="mobileNumber">
+             <small class="text-danger" *ngIf="!mobileNumber.valid && (mobileNumber.touched || mobileNumber.dirty)">
+                 <small class="text-danger" *ngIf="mobileNumber.errors?.required">
+                     Mobilenumber is Required*
+                 </small>
+                 <small class="text-danger" *ngIf="mobileNumber.errors?.pattern">
+                     Mobilenumber is invalid*
+                 </small>
+
+             </small>
+         </div>
+         <div class="password-box">
+             <input name="password" class="password" type="password" id="password" placeholder="Enter Password" [(ngModel)]="dataBase.password" formControlName="password">
+             <small class="text-danger" *ngIf="!password.valid && (password.touched || password.dirty)">
+                 <small  class="text-danger" *ngIf="password.errors?.required">
+                     Password is Required*
+                 </small>
+                 <small class="text-danger" *ngIf="password.errors?.pattern">
+                     Invalid Password*
+                 </small>
+             </small>
+         </div>
+
+         <div class="confirm-password-box">
+             <input name="confirmPassword" class="confirm-password" type="password" id="confirmPassword" placeholder="Enter Password" [(ngModel)]="dataBase.confirmPassword" formControlName="confirmPassword">
+             <small class="text-danger" *ngIf="registerPage.errors?.PasswordNoMatch && (confirmPassword.touched || confirmPassword.dirty)">
+                 Passwords do match match*
+             </small>
+         </div>
+         
+         <button class="register-button" id="submitButton" type="submit" [disabled]="!registerPage.valid">Register</button>
+         <p class="login-link" style="color: aliceblue;">Already a user? <a href="#" routerLink="/login" id="signinLink">Login</a> </p>
+     </div>
+ </form>
+</div>
+</div>
+</body>
+
+<!-- <h1>SignUp</h1> -->

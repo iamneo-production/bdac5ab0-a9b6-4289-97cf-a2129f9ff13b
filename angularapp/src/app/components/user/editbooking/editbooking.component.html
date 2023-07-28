@@ -1,0 +1,59 @@
+<div class="bg">
+    <form #editBooking="ngForm"  > 
+        <div class ="gridSection">
+          <h1>Booking Details</h1>
+          <div style="width:80%; margin:auto">
+            <div>
+                <div style="width:50%;
+                display: inline-block;">
+                <input class="inputStyle"  type="text" id="boatName" placeholder="Boat name" [(ngModel)]="vehicles.vehicleName" name="boatName" [disabled]="true" >
+                </div>
+                <div style="width:50%;display: inline-block;">
+                <input class="inputStyle" type="text" id="address"  placeholder="Address" [(ngModel)]="vehicles.vehicleAddress" name="Address" [disabled]="true" >
+              </div>
+            </div>
+          <div style = "margin-top:1%">
+            <div style="width:50%; display: inline-block;">
+              <div>
+                <input class="inputStyle tempcls"  type="date" id="editBookingDate" placeholder="From Date:dd/mm/yy" min="{{currentDate|date:'yyyy-MM-dd'}}" [(ngModel)]="bookingDetails.fromDate" (change)="calculatePrice()" name="fromDate" >
+                <img class="editIcon" src="assets/edit-icon.png">
+              </div>
+            </div>
+            <div style="width:50%; display: inline-block;">
+              <input class="inputStyle tempcls " type="date" id="editBookingDate"  placeholder="To Date:dd/mm/yy" min="{{currentDate|date:'yyyy-MM-dd'}}" [(ngModel)]="bookingDetails.toDate" (change)="calculatePrice()" name="toDate" >
+            <img class="editIcon" src="assets/edit-icon.png">
+            </div>
+
+            <div style="width:50%; display: inline-block;margin-top:10px">
+              <input class="inputStyle tempcls " type="text" id="startTime" placeholder="Start time: HH:mm" onfocus="this.type='time'" onblur="this.type='time'" [(ngModel)]="bookingDetails.startTime" (change)="calculatePrice()" name="startTime"> 
+              <img class="editIcon" src="assets/edit-icon.png">
+            </div>
+              <div style="width:50%; display: inline-block;">
+              <input class="inputStyle tempcls " type="text" id="endTime" placeholder="End time: HH:mm"  onfocus="this.type='time'" onblur="this.type='time'" [(ngModel)]="bookingDetails.endTime" (change)="calculatePrice()" name="endTime">
+              <img class="editIcon" src="assets/edit-icon.png">
+            </div>
+
+            <!-- <div style="width:50%; display: inline-block;">
+              <input type="time" id="startTime" placeholder="Start time" [(ngModel)]="bookingDetails.startTime" name="startTime"> </div>
+              <div style="width:50%; display: inline-block;">
+              <input type="time" id="endTime" placeholder="End time" [(ngModel)]="bookingDetails.endTime" name="endTime">
+            </div> -->
+          </div>
+      <div style = "margin-top:1%">
+    <div style="width:50%; display: inline-block;">
+    <input class="inputStyle tempcls"  type="number" id="editNoOfPersons" placeholder="No.of.persons" [(ngModel)]="bookingDetails.noOfPersons" name="number" (change)="calculatePrice()">
+     <img class="editIcon"src="assets/edit-icon.png" >
+    </div>
+    <div style="width:50%;display: inline-block;">
+      <input class="inputStyle" type="number" id="price"  placeholder="Total Price" [(ngModel)]="bookingDetails.totalPrice" name="price" [disabled]="true">
+    </div>
+  </div>
+  <div>
+    <button class="deleteButton" (click)="deleteBooking(bookingDetails.bookingId)">Delete Booking</button><br>
+    <button class="saveButton" (click)="saveBooking()">Save</button><br>
+  </div>
+        
+      </div>
+      </div>
+    </form>
+</div>

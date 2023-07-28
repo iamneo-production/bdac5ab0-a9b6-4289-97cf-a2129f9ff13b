@@ -1,0 +1,24 @@
+label {
+    display: block;
+    margin-top: 10px;
+  }
+  body{
+    margin:0;
+    height:100%;
+    overflow: hidden; 
+  }
+  label{
+    color:white;
+  }
+ .bg {
+  background-image: url(https://catholicfaithandreason.files.wordpress.com/2018/08/7617298900_e8d91e3177_z.jpg?w=640);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  box-sizing: border-box;
+  
+}
