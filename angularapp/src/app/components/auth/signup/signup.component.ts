@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
   dataBase: UserStorage = new UserStorage();
   registerPage = new FormGroup(
     {
-      userType: new FormControl('',[Validators.required]),
+      userType: new FormControl(''),
       email: new FormControl('',[Validators.required,Validators.email]),
       username : new FormControl('',[Validators.required]),
       mobileNumber: new FormControl('',[Validators.required, Validators.pattern("[6-9]{1}[0-9]{9}")]),
@@ -52,7 +52,23 @@ export class SignupComponent implements OnInit {
   }
 
   onSubmit(){
-    this.addRegister();
+    this.validation();
+  }
+
+  validation(){
+    if((this.dataBase.email==null || this.dataBase.email=='') || (this.dataBase.username==null || this.dataBase.username=='') || (this.dataBase.mobileNumber==null || this.dataBase.mobileNumber=='') || (this.dataBase.password==null || this.dataBase.password=='') || (this.dataBase.confirmPassword==null || this.dataBase.confirmPassword=='')){
+      alert('Enter all the details....');
+    }
+    else{
+      //alert("Vehicle added successfully.")
+      if((this.dataBase.userRole==null || this.dataBase.userRole=='')){
+        this.dataBase.userRole="user"
+      }
+      console.log(this.dataBase);
+      
+      this.addRegister();
+      
+    }
   }
 
   addRegister(){
