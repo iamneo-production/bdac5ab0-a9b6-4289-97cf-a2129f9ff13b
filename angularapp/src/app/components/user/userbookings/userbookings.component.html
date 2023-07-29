@@ -6,7 +6,7 @@
           <p class="toDate">To: {{booking.toDate | date: 'dd/MM/yyyy'}}</p>
           <p>No.of Passengers:{{booking.noOfPersons}}</p> <br>
           <button class="button-class" type="submit" (click)="edit(booking.bookingId)" >Edit</button><br>
-          <button class="deleteButton" id="cancelBookingButton" (click)="deleteBooking(bookingDetails.bookingId)">Delete Booking</button><br>
+          <button class="deleteButton" id="cancelBookingButton" (click)="deleteBooking(booking.bookingId)">Delete Booking</button><br>
           <button class="button-class" type="submit" (click)="redirectToPayment(booking.bookingId)"> Payment</button> <br>
         </div>
 </div>

@@ -6,7 +6,7 @@
 
 <div class="container" id="grid{{i+1}}" *ngFor="let boat of boatList | filter: searchText; index as i "   >
     <div class="card"  >
-      <div class="card-image"><img src="{{boat.vehicleImageUrl}}" style="width:100%"></div>
+      <div class="card-image"><img src="{{boat.vehicleImageURL}}" style="width:100%"></div>
           <h1 style="font-size: x-large;">  {{boat.vehicleName}} </h1>
           <p id="">Place: {{boat.vehicleAddress}}</p>
           <p class="price">Price: {{boat.price}} per hour</p>

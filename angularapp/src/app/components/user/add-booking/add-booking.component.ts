@@ -90,20 +90,10 @@ export class AddBookingComponent implements OnInit {
     let dHours=Math.ceil(time/(1000*60*60));
     let [hour1,min1]=this.bookings.startTime.split(":");
     let [hour2,min2]=this.bookings.endTime.split(":");
-    if(parseInt(hour2)-parseInt(hour1)<=0){
-      console.log(parseInt(hour2)-parseInt(hour1)); 
-      alert("End time must not be lesser than start time");
-      return -1;
-    }
-    else{
-      this.totalHours=dHours+(parseInt(hour2)-parseInt(hour1));
-      console.log("Total Hours: ",this.totalHours);
-      return this.totalHours;
+    this.totalHours=dHours+(parseInt(hour2)-parseInt(hour1));
+    console.log("Total Hours: ",this.totalHours);
+    return this.totalHours
   }
-    // this.totalHours=dHours+(parseInt(hour2)-parseInt(hour1));
-    // console.log("Total Hours: ",this.totalHours);
-    // return this.totalHours
-}
 // calculateHours(){
 //   let time= Math.abs(new Date(this.bookings.toDate).getTime() - new Date(this.bookings.fromDate).getTime());
 //   let dHours=Math.ceil(time/(1000*60*60));
