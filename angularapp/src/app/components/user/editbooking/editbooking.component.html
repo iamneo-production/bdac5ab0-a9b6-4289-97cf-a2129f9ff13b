@@ -20,7 +20,7 @@
               </div>
             </div>
             <div style="width:50%; display: inline-block;">
-              <input class="inputStyle tempcls " type="date" id="editBookingDate"  placeholder="To Date:dd/mm/yy" min="{{currentDate|date:'yyyy-MM-dd'}}" [(ngModel)]="bookingDetails.toDate" (change)="calculatePrice()" name="toDate" >
+              <input class="inputStyle tempcls " type="date" id="editBookingDate"  placeholder="To Date:dd/mm/yy" min="{{bookingDetails.fromDate|date:'yyyy-MM-dd'}}" [(ngModel)]="bookingDetails.toDate" (change)="calculatePrice()" name="toDate" >
             <img class="editIcon" src="assets/edit-icon.png">
             </div>
 

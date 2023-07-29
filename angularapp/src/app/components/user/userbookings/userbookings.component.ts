@@ -44,7 +44,8 @@ export class UserbookingsComponent implements OnInit {
       this.addp.deletePassenger(id).subscribe((data:any)=>{
         console.log("Deleted Passengers also");
       })
-      this.router.navigate(['/user/myBooking']);
+      //window.location.reload()
+      this.router.navigate(['/user/home']);
     })
   
   }

@@ -16,8 +16,8 @@ export class FilterPipe implements PipeTransform {
     
     for (const user of value) {
       if(user['vehicleName'].toLowerCase().includes (filterString.toLowerCase()) || 
-         user['vehicleCity'].toLowerCase().includes (filterString.toLowerCase()) ||
-         user["vehiclePrice"].toLowerCase().includes (filterString.toLowerCase())) {
+         user['vehicleAddress'].toLowerCase().includes (filterString.toLowerCase) ||
+         user["price"].toLowerCase().includes (filterString.toLowerCase())) {
          users.push(user);
       }
     }
