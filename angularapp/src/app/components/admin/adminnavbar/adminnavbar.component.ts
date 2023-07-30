@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginauthService } from '../../auth/loginauth.service';
+
 
 @Component({
   selector: 'app-adminnavbar',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminnavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private log:LoginauthService){}
+  logout(){
+    this.log.logout();
+  }
 
   ngOnInit(): void {
   }
