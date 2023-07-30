@@ -1,0 +1,82 @@
+.search-hero {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
+  
+  .form-control {
+    box-shadow: 0 10px 40px 0 #B0C1D9;
+  }
+  .form-control::placeholder  {
+    font-family: FontAwesome;
+  }
+  
+  /*
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  } */
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  
+  }
+  
+  *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .card-image{
+    background-size: cover;
+    height: 190px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+  }
+  .card{
+    border-color: black;
+    width: 270px;
+    margin: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .button-class{
+    background-color: black; 
+    color: white;
+    align-items: center;
+    width: 50px;
+    margin-left: 40% ;
+  }
+  /*------------------*/
+  
+  
