@@ -1,1 +1,39 @@
-<p>addpassengers works!</p>
+<form (ngSubmit)="onSubmit()">
+    
+    <div class = "page-header" style="position:absolute;left:500px;top:150px;">
+        <h1>
+           Add passenger details
+        </h1>
+     </div>
+    <div class="container">
+
+        
+        <div class="form-row" *ngFor="let x of dataarray; let i=index">
+            
+    
+            <div class="form-group col-md-3">
+                <input type="text" required class="form-control" name="fname{{i}}" placeholder="First name"  id="" [(ngModel)]="x.firstName" >
+                
+            </div>
+            <div class="form-group col-md-3">
+                
+                <input type="text" required class="form-control" name="lname{{i}}" placeholder="Last name" id="" [(ngModel)]="x.lastName">
+            </div>
+            <div class="form-group col-md-2">
+                
+                <input type="number" required class="form-control" name="age{{i}}" placeholder="Age" id="" [(ngModel)]="x.age">
+            </div>
+            <div class="form-group col-md-2">
+                
+                <input type="text" required class="form-control" name="gender{{i}}" placeholder="Gender" id="" [(ngModel)]="x.gender">
+            </div>
+            
+            <div class="form-group col-md-2" *ngIf="i!=0 && i==(this.count-1)">
+                <span (click)="removeForm(i)" class="btn btn-danger">-</span>
+            </div>
+        </div>
+        <span (click)="addForm()" class="btn btn-success" *ngIf="this.count <= this.book.persons">+</span>
+    <button class="btn btn-primary submitButton">Submit</button>
+    </div>
+    
+</form>
