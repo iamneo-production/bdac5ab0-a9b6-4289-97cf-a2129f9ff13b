@@ -1,27 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { ProfileDetails } from '../../datatypes';
-import { AuthService } from '../../auth/auth.service';
-import { ProfileService } from '../userservices/profile.service';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-@Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
-})
-export class ProfileComponent implements OnInit {
+import { ProfileComponent } from './profile.component';
 
-  profileModel : ProfileDetails=new ProfileDetails();
+describe('ProfileComponent', () => {
+  let component: ProfileComponent;
+  let fixture: ComponentFixture<ProfileComponent>;
 
-  constructor(private ps:ProfileService,private auth:AuthService){ }
-
-  id=this.auth.userId;
-  ngOnInit(): void{
-    console.log(this.id);
-    
-    this.ps.getDetailsById(this.auth.userId).subscribe((result:any)=>{
-      console.log(result);
-      this.profileModel=result;
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ ProfileComponent ]
     })
-  }
+    .compileComponents();
+  });
 
-}
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ProfileComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
