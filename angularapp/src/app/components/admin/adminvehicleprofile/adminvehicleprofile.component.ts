@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Addvehicle } from '../../datatypes';
+import { AddvehicleService } from '../addvehicle.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-adminvehicleprofile',
@@ -7,9 +10,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminvehicleprofileComponent implements OnInit {
 
-  constructor() { }
+  getVehicles!: Addvehicle[];
+  
 
-  ngOnInit(): void {
+  constructor(private addvehicleService: AddvehicleService,private router:Router ){}
+
+  ngOnInit(): void{
+    this.displayUser();
+  }
+
+  displayUser(){
+    this.addvehicleService.getAllAddVehicles().subscribe(data =>{
+      console.log(data);
+      this.getVehicles=data;
+    })
+  }
+
+  editVehicle(id:number){
+    console.log(typeof(id))
+    this.router.navigate(['admin/admin-editbooking', id]);
+  }
+  
+  deleteVehicle(id:number){
+    console.log(typeof(id))
+    this.addvehicleService.deleteVehicle(id).subscribe(data =>{
+      this.displayUser();
+    })
   }
 
 }
+
