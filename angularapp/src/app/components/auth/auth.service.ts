@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
 import { LoginauthService } from './loginauth.service';
 import { Observable } from 'rxjs';
-import { UserStorage, login } from '../datatypes';
+import { UserStorage, login } from 'src/app/components/datatypes';
+//import { UserStorage, login } from '../datatypes';
 
 @Injectable({
   providedIn: 'root'

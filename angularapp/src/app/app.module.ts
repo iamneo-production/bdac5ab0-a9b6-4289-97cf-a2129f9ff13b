@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { AddBookingComponent } from './components/user/add-booking/add-booking.component';
 import { UserbookingsComponent } from './components/user/userbookings/userbookings.component';
 import { UserhomepageComponent } from './components/user/userhomepage/userhomepage.component';
-import { UserreviewComponent } from './components/user/userreview/userreview.component';
+import { UserreviewsComponent } from './components/user/userreviews/userreviews.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { AdddetailsComponent } from './components/admin/adddetails/adddetails.component';
@@ -36,7 +36,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
-import { UserreviewsComponent } from './components/user/userreviews/userreviews.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +43,7 @@ import { UserreviewsComponent } from './components/user/userreviews/userreviews.
     AddBookingComponent,
     UserbookingsComponent,
     UserhomepageComponent,
-    UserreviewComponent,
+    UserreviewsComponent,
     LoginComponent,
     SignupComponent,
     AdddetailsComponent,
@@ -63,8 +62,7 @@ import { UserreviewsComponent } from './components/user/userreviews/userreviews.
     UserComponent,
     UserdashboardComponent,
     UsernavbarComponent,
-    FilterPipe,
-    UserreviewsComponent
+    FilterPipe
   ],
   imports: [
     BrowserModule,
