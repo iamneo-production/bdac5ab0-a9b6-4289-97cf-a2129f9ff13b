@@ -1,1 +1,50 @@
-<p>editprofile works!</p>
+<div class="container">
+    <div class="box">
+        <h1><u>My Profile</u></h1>
+        <hr><br>
+        <div class="body">
+          <form [formGroup]="editProfile" (submit)="onSubmit()">
+				  <br>
+				  <div >
+					  <label for="name">First Name : </label>
+					  <input type="text" value="{{profileModel.fname}}" [(ngModel)]="profileModel.fname" formControlName="fname" placeholder="Enter First Name">
+				  </div>
+				  <br>
+				  <div>
+					  <label for="name">Last Name : </label>
+					  <input type="text" value="{{profileModel.lname}}"  [(ngModel)]="profileModel.lname" formControlName="lname" placeholder="Enter Last Name">
+				  </div>
+				  <br>
+				  <div >
+					  <label for="email">E-Mail Id : </label>
+					  <input type="email" disabled placeholder="{{profileModel.emailId}}">
+				  </div>
+				  <br>
+				  <div >
+					  <label for="username">Username : </label>
+					  <input type="text" value="{{profileModel.userName}}"  [(ngModel)]="profileModel.userName" formControlName="userName" placeholder="Enter Username">
+				  </div>
+				  <br>
+				  <div >
+					  <label for="mobile number">Mobile Number : </label>
+					  <input type="number" value="{{profileModel.mobileNumber}}"  [(ngModel)]="profileModel.mobileNumber" formControlName="mobileNumber" placeholder="Enter Number">
+				  </div>
+				  <br>
+				  <div>
+					  <label for="gender">Gender : </label>
+					  <input type="text" [(ngModel)]="profileModel.gender" formControlName="gender" placeholder="Enter Gender">
+				  </div>
+				  <br>
+				  <div>
+					  <label for="dob">DOB : </label>
+					  <input type="date" id="date" oninput="date.value.toString()" [(ngModel)]="profileModel.dOB" formControlName="dOB">
+				  </div>
+				  <br>
+				  <button mat-raised-button color="primary">Submit</button>
+			  </form>
+		  </div>
+		  <br>
+      <hr>
+	</div>
+</div>
+

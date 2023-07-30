@@ -1,8 +1,9 @@
 <div class="container">
     <div class="box">
         <h1><u>My Profile</u></h1>
-        <br><br>
+        <hr><br>
         <div class="body" >
+          <br>
             <div >
                 <div >
                     <label for="name">Name :  </label>
@@ -25,14 +26,20 @@
                 <input disabled type="number" value="{{profileModel.mobileNumber}}">
             </div>
 	        <br>
-            <label for="gender">Gender : </label>
-            <input disabled type="text" value="{{profileModel.gender}}">
-	        <br><br>
-	        <label  for="dob" type="date">DOB : </label>
-	        <input disabled type="text" value="{{profileModel.dOB | date :'mediumDate'}}">
-	        <br><br>
-        </div>
+            <div>
+                <label for="gender">Gender : </label>
+                <input disabled type="text" value="{{profileModel.gender}}">
+            </div>
+	        <br>
+            <div>
+	              <label  for="dob" type="date">DOB : </label>
+	              <input disabled type="text" value="{{profileModel.dOB | date :'mediumDate'}}">
+            </div>
+	        <br>
         <button mat-raised-button color="primary" routerLink="/user/edit">Edit</button>
+        </div>
+        <br>
+        <hr>
     </div>
 </div>
 
