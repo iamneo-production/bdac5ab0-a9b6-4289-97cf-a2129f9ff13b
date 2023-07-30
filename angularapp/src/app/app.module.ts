@@ -36,6 +36,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatRadioModule } from '@angular/material/radio';
+import { UserreviewsComponent } from './components/user/userreviews/userreviews.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { MatRadioModule } from '@angular/material/radio';
     UserComponent,
     UserdashboardComponent,
     UsernavbarComponent,
-    FilterPipe
+    FilterPipe,
+    UserreviewsComponent
   ],
   imports: [
     BrowserModule,
