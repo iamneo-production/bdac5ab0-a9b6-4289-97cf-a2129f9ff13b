@@ -1,25 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+// import { RouterTestingModule } from '@angular/router/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { UserbookingsComponent } from './userbookings.component';
 
 describe('UserbookingsComponent', () => {
   let component: UserbookingsComponent;
-  let fixture: ComponentFixture<UserbookingsComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ UserbookingsComponent ]
-    })
-    .compileComponents();
-  });
-
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [HttpClientTestingModule], 
+    providers: [UserbookingsComponent]
+  }));
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserbookingsComponent);
+    const fixture = TestBed.createComponent(UserbookingsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
-
-  it('should create', () => {
+  it('FE_userBookings', () => {
     expect(component).toBeTruthy();
   });
 });
