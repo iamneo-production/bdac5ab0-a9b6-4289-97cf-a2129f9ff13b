@@ -1,1 +1,41 @@
-<p>payment works!</p>
+<html>
+  <body class="bg">
+  <h1>Payment Gateway</h1>
+  <hr/>
+<form  *ngIf="orderForm" [formGroup]="orderForm" (ngSubmit)="pay()" >
+    <div>
+      <label for="name">Name: <span class="required">*</span></label>
+      <input type="text" id="name"  formControlName="name" required>
+    </div>
+    <div>
+      <label for="email">Email:  <span class="required">*</span></label>
+      <input type="email" id="email" name="email" formControlName="email" required   >
+    </div>
+    <div>
+      <label for="phone">Phone Number:  <span class="required">*</span></label>
+      <input type="text" id="phone" name="phone" formControlName="phone" required>
+    </div>
+    <!-- <div>
+      <label for="pricePerHead">Price</label>
+      <input type="number" value="500" id="pricePerHead"  readonly>
+    </div> -->
+    <!-- <div class="form-group">
+      <label for="quantity">Total Persons</label>
+      <input type="number" formControlName="quantity" required> 
+    </div>
+    <div class="form-group">
+      <label for="hours">Total Hours</label>
+      <input type="number" id="hours" name="hours" formControlName="hours" min="1" max="24"(input)="calculateAmount()" required> 
+      
+    </div> -->
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      {{ this.tPrice }}
+    </div>
+    <div>
+      <button type="submit">Pay</button>
+    </div>
+  </form>
+</body>
+</html>
+  
