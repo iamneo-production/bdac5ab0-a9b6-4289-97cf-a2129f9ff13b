@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 //package com.example.login.controller;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.controller;
 
 import javax.persistence.Entity;
 import java.util.List;
 
 import com.examly.springapp.model.Vehicle;
+<<<<<<< HEAD
+=======
+import com.examly.springapp.dtomodels.VehicleTestDTO;
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 import com.examly.springapp.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +25,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.DeleteMapping;
+<<<<<<< HEAD
+=======
+import org.springframework.web.bind.annotation.RequestParam; 
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 import java.util.Optional;
 //import com.example.demo.model.Vehicle;
 //import com.example.demo.service.VehicleService;
@@ -46,11 +57,19 @@ public class VehicleController {
         return new ResponseEntity<Vehicle>(booked, HttpStatus.CREATED);
         //return vehicleService.saveVehicle(vehicles);
     }
+<<<<<<< HEAD
 
     @GetMapping("/admin/vehicle/{vehicleId}")
     public ResponseEntity<Vehicle> getVehicleById(@PathVariable Long vehicleId){
         Vehicle data=vehicleService.getVehicleById(vehicleId);
         return new ResponseEntity<Vehicle>(data,HttpStatus.CREATED);
+=======
+    
+
+    @GetMapping("/admin/vehicle/{vehicleId}")
+    public Optional<Vehicle> getVehicleById(@PathVariable String vehicleId){
+        return vehicleService.getVehicleById(vehicleId);
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
     }
 
     @PostMapping("/admin/saveVehicle")
@@ -61,6 +80,7 @@ public class VehicleController {
     }
 
     @PutMapping("/admin/editVehicle/{vehicleId}")
+<<<<<<< HEAD
     public Vehicle editVehicle(@PathVariable Long vehicleId,@RequestBody Vehicle vehicledetails){
 
         return vehicleService.editVehicle(vehicleId,vehicledetails);
@@ -71,6 +91,36 @@ public class VehicleController {
         vehicleService.deleteVehicle(vehicleId);
     }
 
+=======
+    public Vehicle editVehicle(@PathVariable String vehicleId,@RequestBody Vehicle vehicledetails){
+        return vehicleService.editVehicle(vehicleId,vehicledetails);
+    }
+
+    
+    @DeleteMapping("/admin/deleteVehicle/{vehicleId}")
+    public void deleteVehicle(@PathVariable String vehicleId) {
+        vehicleService.deleteVehicle(vehicleId);
+    }
+
+    @PostMapping("/admin/addProduct")
+    public Vehicle addVehicle( @RequestBody Vehicle vehicle){
+        //Vehicle booked = 
+        return vehicleService.bookVehicle(vehicle);
+        //return vehicleService.saveVehicle(vehicles);
+    }
+    
+    @PutMapping("/admin/productEdit")
+    public Vehicle editVehicleById(@RequestParam("vehicleID") String vehicleID,@RequestBody Vehicle vehicle){
+
+        return vehicleService.editVehicle(vehicleID,vehicle);
+    }
+
+    @GetMapping("/admin")
+    public List<Vehicle> getAllVehicle(){
+        return vehicleService.getVehicleAll();
+    }
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 //    @Bean
 //    public WebMvcConfigurer crosConfigurer(){
 //        return new WebMvcConfigurer() {

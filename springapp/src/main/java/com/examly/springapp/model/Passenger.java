@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 //package com.example.login.entity;
 package com.examly.springapp.model;
 
+=======
+package com.examly.springapp.model;
+
+
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
@@ -28,6 +35,7 @@ public class Passenger {
     @Column(name = "booking_id")
     private Long bookingId;
 
+<<<<<<< HEAD
     public Passenger() {
     }
 
@@ -37,6 +45,13 @@ public class Passenger {
         this.lastName = lastName;
         this.age = age;
         this.gender = gender;
+=======
+    public Long getBookingId() {
+        return bookingId;
+    }
+
+    public void setBookingId(Long bookingId) {
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
         this.bookingId = bookingId;
     }
 
@@ -71,6 +86,10 @@ public class Passenger {
         this.gender = gender;
     }
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 //    public String getG() {
 //        return g;
 //    }
@@ -78,4 +97,7 @@ public class Passenger {
 //    public void setG(String g) {
 //        this.g = g;
 //    }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //package com.example.login.Config;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.config;
 
 //import com.example.SpringSecurity.Service.CustomUserDetailsService;
@@ -53,7 +56,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         http
                 .csrf().disable()
                 .authorizeRequests()
+<<<<<<< HEAD
                 .antMatchers("/token","/user/signup","/admin/signup","/user/booking","/user/booking/{bookingid}","/admin/vehicle","/admin/vehicle/{vehicleId}").permitAll()
+=======
+                .antMatchers("/token","/user/signup","/admin/signup","/signup","/admin","/admin/addProduct","/admin/productEdit").permitAll()
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
                 .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

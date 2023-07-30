@@ -1,5 +1,11 @@
 package com.examly.springapp.model;
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,13 +39,25 @@ public class Booking {
     private String noOfPersons;
 
     @Column(name = "from_date")
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
     private String fromDate;
 
     @Column(name = "to_date")
     private String toDate;
 
+<<<<<<< HEAD
+=======
+    @Column(name = "from_time")
+    private String startTime;
+
+    @Column(name = "to_time")
+    private String endTime;
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
     @Column(name = "total_price")
     private String totalPrice;
 
@@ -48,12 +66,37 @@ public class Booking {
     @Column(name = "vehicle_id")
     private Long vehicleId;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 //    private String tPrice;
 //
 //    public String gettPrice() {
 //        return tPrice;
 //    }
 //
+<<<<<<< HEAD
+=======
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 //    public void settPrice(String tPrice) {
 //        this.tPrice = tPrice;
 //    }
@@ -131,5 +174,9 @@ public class Booking {
     }
 
 
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //package com.example.login.controller;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.controller;
 
 import com.examly.springapp.model.Passenger;
@@ -11,6 +14,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+<<<<<<< HEAD
+=======
+import java.util.List;
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 
 @CrossOrigin(origins ="*")
 @RestController
@@ -18,12 +26,31 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class PassengerController {
     @Autowired
     private PassengerService passengerService;
+<<<<<<< HEAD
     @PostMapping("/user/addpassenger")
     public ResponseEntity<Passenger> addPassenger(@RequestBody Passenger passenger){
         Passenger savedBooking = passengerService.addPassenger(passenger);
         return new ResponseEntity<Passenger>(savedBooking, HttpStatus.CREATED);
     }
 
+=======
+
+    @PostMapping("/user/addpassenger")
+    public ResponseEntity<?> createPassenger(@RequestBody List<Passenger> entity) {
+
+        //System.out.println(entity.toString());
+        ResponseEntity<?> passengerEntity = passengerService.CreatePassenger(entity);
+       // System.out.println("passengerEntity:" + passengerEntity);
+
+        return passengerEntity;
+}
+    @DeleteMapping("/user/deletepassenger/{bookingid}")
+    public void deleteEntities(@PathVariable("bookingid") Long bookingid) {
+        passengerService.deleteEntitiesById(bookingid);
+    }
+
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 //    @Bean
 //    public WebMvcConfigurer crosConfigurer(){
 //        return new WebMvcConfigurer() {

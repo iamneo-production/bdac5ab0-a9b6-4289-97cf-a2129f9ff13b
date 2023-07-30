@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //package com.example.login.Helper;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.helper;
 
 import io.jsonwebtoken.Claims;
@@ -20,7 +23,11 @@ public class JwtUtil {
 
     private static final long serialVersionUID = -2550185165626007488L;
 
+<<<<<<< HEAD
     public static final long JWT_TOKEN_VALIDITY = 1 * 10 * 60;
+=======
+    public static final long JWT_TOKEN_VALIDITY = 1 * 20 * 60;
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 
     @Value("${jwt.secret}")
     private String secretKey;

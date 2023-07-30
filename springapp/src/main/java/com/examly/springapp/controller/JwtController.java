@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 //package com.example.login.controller;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 //import com.example.SpringSecurity.Helper.JwtUtil;
 //import com.example.SpringSecurity.Model.JwtRequest;
 //import com.example.SpringSecurity.Model.JwtResponse;
 //import com.example.SpringSecurity.Service.CustomUserDetailsService;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.controller;
 import com.examly.springapp.helper.JwtUtil;
 import com.examly.springapp.model.User;
@@ -47,7 +54,11 @@ public class JwtController {
         UserDetails userDetails =this.customUserDetailsService.loadUserByUsername(loginModel.getEmailId());
         String token =jwtUtil.generateToken(userDetails);
         System.out.println("JWT "+token);
+<<<<<<< HEAD
         final User user = userRepository.findUserByEmailId(loginModel.getEmailId());
+=======
+        final User user = userRepository.findUserByEmail(loginModel.getEmailId());
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
         return ResponseEntity.ok( new JwtResponse(token, user));
     }
 }

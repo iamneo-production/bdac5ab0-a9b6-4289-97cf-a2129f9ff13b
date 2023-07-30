@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //package com.example.login.service;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.service;
 
 
@@ -27,6 +30,7 @@ public class VehicleService {
         return vehiclerepo.save(vehicles);
     }
 
+<<<<<<< HEAD
     public Vehicle getVehicleById(Long vehicleId){
         return vehiclerepo.findById(vehicleId).get();
     }
@@ -41,10 +45,29 @@ public class VehicleService {
         vehicle.setVehiclePrice(vehicledetails.getVehiclePrice());
         vehicle.setVehicleCapacity(vehicledetails.getVehicleCapacity());
         vehicle.setVehicleDescription(vehicledetails.getVehicleDescription());
+=======
+    public Optional<Vehicle> getVehicleById(String vehicleId){
+        return vehiclerepo.findById(vehicleId);
+    }
+
+    public Vehicle saveVehicle(String vehicleId, Vehicle vehicledetails){
+        Vehicle vehicle=vehiclerepo.findById(vehicleId).orElseThrow(() -> new NoSuchElementException("Vehicle does not exist with id : "+vehicleId));
+        vehicle.setVehicleID(vehicledetails.getVehicleID());
+        vehicle.setVehicleName(vehicledetails.getVehicleName());
+        vehicle.setVehicleAvailableTiming(vehicledetails.getVehicleAvailableTiming());
+        vehicle.setVehicleAddress(vehicledetails.getVehicleAddress());
+        vehicle.setVehicleImageURL(vehicledetails.getVehicleImageURL());
+        vehicle.setPrice(vehicledetails.getPrice());
+        vehicle.setVehicleCapacity(vehicledetails.getVehicleCapacity());
+        vehicle.setVehicleDescription(vehicledetails.getVehicleDescription());
+        vehicle.setVehicleAvailableStatus(vehicledetails.getVehicleAvailableStatus());
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
         return vehiclerepo.save(vehicle);
     }
 
 
+<<<<<<< HEAD
     public Vehicle editVehicle(Long vehicleId, Vehicle vehicledetails){
         Vehicle vehicle=vehiclerepo.findById(vehicleId).orElseThrow(() -> new NoSuchElementException("Vehicle does not exist with id : "+vehicleId));
 
@@ -55,11 +78,28 @@ public class VehicleService {
         vehicle.setVehiclePrice(vehicledetails.getVehiclePrice());
         vehicle.setVehicleCapacity(vehicledetails.getVehicleCapacity());
         vehicle.setVehicleDescription(vehicledetails.getVehicleDescription());
+=======
+    public Vehicle editVehicle(String vehicleId, Vehicle vehicledetails){
+        Vehicle vehicle=vehiclerepo.findById(vehicleId).orElseThrow(() -> new NoSuchElementException("Vehicle does not exist with id : "+vehicleId));
+        vehicle.setVehicleID(vehicledetails.getVehicleID());
+        vehicle.setVehicleName(vehicledetails.getVehicleName());
+        vehicle.setVehicleAvailableTiming(vehicledetails.getVehicleAvailableTiming());
+        vehicle.setVehicleAddress(vehicledetails.getVehicleAddress());
+        vehicle.setVehicleImageURL(vehicledetails.getVehicleImageURL());
+        vehicle.setPrice(vehicledetails.getPrice());
+        vehicle.setVehicleCapacity(vehicledetails.getVehicleCapacity());
+        vehicle.setVehicleDescription(vehicledetails.getVehicleDescription());
+        vehicle.setVehicleAvailableStatus(vehicledetails.getVehicleAvailableStatus());
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 
         return vehiclerepo.save(vehicle);
     }
 
+<<<<<<< HEAD
     public void deleteVehicle(Long vehicleId) {
+=======
+    public void deleteVehicle(String vehicleId) {
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
         vehiclerepo.deleteById(vehicleId);
     }
 

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-//package com.example.login.model;
-=======
->>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.dtomodels;
 
 import lombok.AllArgsConstructor;
@@ -13,28 +9,14 @@ import javax.validation.constraints.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserModel {
+public class UserTestDTO {
+
     private long id;
-
-    @NotBlank(message = "Invalid User Name: Empty User Name")
-//    @Size(min = 3, max = 30, message = "Invalid User Name: Must be of 3 - 30 characters")
-    @Pattern(regexp = "^[a-zA-Z0-9]{4,12}$", message = "Username must be of 4 to 12 length with no special characters.")
-    private String userName;
-
-    @Email(message = "Invalid emailId")
-    private String emailId;
-
-    @NotNull
-    @Size(min = 2, max = 30)
+    private String username;
+    private String email;
     private String password;
     private String cpassword;
-
-    @NotBlank(message = "Invalid Phone number: Empty number")
-    @Pattern(regexp = "^\\d{10}$", message = "Invalid phone number")
     private String mobileNumber;
-
-    @NotBlank(message = "User Role is Empty")
-    @Size(min = 4, max = 5, message = "Please enter user role as admin or user")
     private String userRole;
 
     public long getId() {
@@ -45,20 +27,20 @@ public class UserModel {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getEmail() {
+        return email;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {

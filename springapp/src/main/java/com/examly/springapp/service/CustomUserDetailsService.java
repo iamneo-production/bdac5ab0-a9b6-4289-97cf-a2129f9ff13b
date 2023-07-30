@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //package com.example.login.service;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.service;
 
 import com.examly.springapp.model.User;
@@ -19,9 +22,15 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserRepository userRepository;
 
     @Override
+<<<<<<< HEAD
     public UserDetails loadUserByUsername(String emailId) throws UsernameNotFoundException {
 
         User user =this.userRepository.findUserByEmailId(emailId);
+=======
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+
+        User user =this.userRepository.findUserByEmail(email);
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
         if (user==null){
             throw new UsernameNotFoundException("User Not Found!");
         }

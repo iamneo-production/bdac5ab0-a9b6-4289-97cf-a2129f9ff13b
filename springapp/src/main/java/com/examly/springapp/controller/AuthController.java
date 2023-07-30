@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 //package com.example.login.controller;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 package com.examly.springapp.controller;
 
 import com.examly.springapp.dtomodels.LoginModel;
 import com.examly.springapp.dtomodels.UserModel;
+<<<<<<< HEAD
+=======
+import com.examly.springapp.dtomodels.UserTestDTO;
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
 import com.examly.springapp.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +28,7 @@ public class AuthController {
     private AuthService authService;
 
     @PostMapping("/user/signup")
+<<<<<<< HEAD
     public String saveUser(@RequestBody @Valid UserModel userModel){
         return authService.saveUser(userModel);
     }
@@ -28,6 +36,21 @@ public class AuthController {
     public String saveAdmin(@RequestBody @Valid UserModel userModel){
         return authService.saveAdmin(userModel);
     }
+=======
+    public String saveUser(@RequestBody @Valid UserTestDTO userTestDTO){
+        return authService.saveUser(userTestDTO);
+    }
+    @PostMapping("/admin/signup")
+    public String saveAdmin(@RequestBody @Valid UserTestDTO userTestDTO){
+        return authService.saveAdmin(userTestDTO);
+    }
+
+    @PostMapping("/signup")
+    public String saveDetails(@RequestBody @Valid UserTestDTO userTestDTO){
+        return authService.saveDetails(userTestDTO);
+    }
+
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
     @PostMapping("/user/login")
     public boolean isUserPresent(@RequestBody LoginModel loginModel){
 
