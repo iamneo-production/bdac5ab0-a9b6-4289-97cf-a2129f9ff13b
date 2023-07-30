@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 package com.examly.springapp.controller;
 
 import com.examly.springapp.model.User;
@@ -27,6 +30,10 @@ public class ProfileController {
     @PutMapping("/updateProfile/{id}")
     public User updateProfile(@PathVariable long id,@RequestBody User user){
         user.setId(id);
+<<<<<<< HEAD
+=======
+        System.out.println(user.toString());
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
         return pS.updateProfile(user);
     }
 
@@ -41,3 +48,7 @@ public class ProfileController {
 //    }
 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6

@@ -1,0 +1,11 @@
+<nav class="circle">
+    <ul>
+        <li ><a id="homeButton" class="nav-link" href="#"  routerLink="/user/home">Sea Senora </a></li>
+        <li ><a id="homeButton" class="nav-link" href="#" routerLinkActive="active" routerLink="/user/home">Home </a></li>
+        <li ><a id="DashBoardButton" class="nav-link" routerLinkActive="active" routerLink="/user/dashboard/addBooking/:id" href="#">Dashboard </a></li>
+        <li ><a id="profileButton" class="nav-link" routerLink="/user/profile" routerLinkActive="active" href="#">Profile</a></li>
+        <li ><a id="myBookingButton" class="nav-link" routerLinkActive="active" routerLink="/user/myBooking" href="#">My Booking</a></li>
+        <li style="float:right"><a id="logout"class="nav-link" href="#" routerLink="/login" (click)="logout()" >Logout</a></li>
+        <li id="help" style="float:right"><a class="nav-link" href="mailto:admin@seasenora.com" >Help</a></li>
+    </ul>
+</nav>

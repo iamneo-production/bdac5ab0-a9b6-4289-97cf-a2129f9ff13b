@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //package com.example.login.Config;
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 package com.examly.springapp.config;
 
 //import com.example.SpringSecurity.Service.CustomUserDetailsService;
@@ -57,10 +60,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .csrf().disable()
                 .authorizeRequests()
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .antMatchers("/token","/user/signup","/admin/signup","/user/booking","/user/booking/{bookingid}","/admin/vehicle","/admin/vehicle/{vehicleId}").permitAll()
 =======
                 .antMatchers("/token","/user/signup","/admin/signup","/signup","/admin","/admin/addProduct","/admin/productEdit").permitAll()
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+                .antMatchers("/token","/user/signup","/admin/signup","/signup","/admin","/user/booking","/user/booking/{bookingid}","/admin/vehicle","/admin/vehicle/{vehicleId}","/admin/addProduct","/admin/productEdit").permitAll()
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
                 .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

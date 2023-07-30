@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //package com.example.login.Exceptions;
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 package com.examly.springapp.exceptions;
 
 import org.springframework.http.HttpHeaders;

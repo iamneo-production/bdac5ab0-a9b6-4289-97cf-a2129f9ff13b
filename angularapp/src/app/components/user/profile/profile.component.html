@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="box">
+        <h1><u>My Profile</u></h1>
+        <hr><br>
+        <div class="body" >
+          <br>
+            <div >
+                <div >
+                    <label for="name">Name :  </label>
+                    <input disabled type="text" value="{{profileModel.fname}} {{profileModel.lname}}">
+                </div>
+            </div>
+            <br>
+            <div >
+                <label for="email">E-Mail Id : </label>
+                <input disabled type="text" value="{{profileModel.email}}">
+            </div>
+	        <br>
+            <div >
+                <label for="username">Username : </label>
+                <input disabled type="text" value="{{profileModel.username}}">
+            </div>
+	        <br>
+            <div >
+                <label for="mobile number">Mobile Number : </label>
+                <input disabled type="number" value="{{profileModel.mobileNumber}}">
+            </div>
+	        <br>
+            <div>
+                <label for="gender">Gender : </label>
+                <input disabled type="text" value="{{profileModel.gender}}">
+            </div>
+	        <br>
+            <div>
+	              <label  for="dob" type="date">DOB : </label>
+	              <input disabled type="text" value="{{profileModel.dOB | date :'mediumDate'}}">
+            </div>
+	        <br>
+        <button mat-raised-button color="primary" routerLink="/user/edit">Edit</button>
+        </div>
+        <br>
+        <hr>
+    </div>
+</div>
+
+

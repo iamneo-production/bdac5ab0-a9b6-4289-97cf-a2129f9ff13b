@@ -1,0 +1,12 @@
+<div class="container"  *ngFor="let booking of getBookings; index as i "   >
+    <div class="card" id="grid{{i+1}}"> <br>
+          <h1 style="font-size: x-large;">  {{booking.boatName}} </h1>
+          <p id="">Place: {{booking.address}}</p>
+          <p class="fromDate">From: {{booking.fromDate | date: 'dd/MM/yyyy'}}</p>
+          <p class="toDate">To: {{booking.toDate | date: 'dd/MM/yyyy'}}</p>
+          <p>No.of Passengers:{{booking.noOfPersons}}</p> <br>
+          <button class="button-class" type="submit" (click)="edit(booking.bookingId)" >Edit</button><br>
+          <button class="deleteButton" id="cancelBookingButton" (click)="deleteBooking(booking.bookingId)">Delete Booking</button><br>
+          <button class="button-class" type="submit" (click)="redirectToPayment(booking.bookingId)"> Payment</button> <br>
+        </div>
+</div>
