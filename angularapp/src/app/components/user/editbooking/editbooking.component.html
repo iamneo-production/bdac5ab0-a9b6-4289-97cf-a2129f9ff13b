@@ -4,6 +4,7 @@
           <h1>Booking Details</h1>
           <div style="width:80%; margin:auto">
             <div>
+              
                 <div style="width:50%;
                 display: inline-block;">
                 <input class="inputStyle"  type="text" id="boatName" placeholder="Boat name" [(ngModel)]="vehicles.vehicleName" name="boatName" [disabled]="true" >
@@ -12,6 +13,7 @@
                 <input class="inputStyle" type="text" id="address"  placeholder="Address" [(ngModel)]="vehicles.vehicleAddress" name="Address" [disabled]="true" >
               </div>
             </div>
+            
           <div style = "margin-top:1%">
             <div style="width:50%; display: inline-block;">
               <div>
@@ -39,6 +41,7 @@
               <input type="time" id="endTime" placeholder="End time" [(ngModel)]="bookingDetails.endTime" name="endTime">
             </div> -->
           </div>
+            
       <div style = "margin-top:1%">
     <div style="width:50%; display: inline-block;">
     <input class="inputStyle tempcls"  type="number" id="editNoOfPersons" placeholder="No.of.persons" [(ngModel)]="bookingDetails.noOfPersons" name="number" (change)="calculatePrice()">
@@ -48,6 +51,7 @@
       <input class="inputStyle" type="number" id="price"  placeholder="Total Price" [(ngModel)]="bookingDetails.totalPrice" name="price" [disabled]="true">
     </div>
   </div>
+            
   <div>
     <button class="saveButton" (click)="saveBooking()">Save</button><br>
   </div>
