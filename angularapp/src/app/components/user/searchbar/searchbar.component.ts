@@ -5,7 +5,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.css']
 })
-export class SearchbarComponent implements OnInit {
+  
+export class SearchbarComponent implements OnInit
+  {
 
   constructor() {}
 
@@ -14,9 +16,11 @@ export class SearchbarComponent implements OnInit {
 enteredSearchValue: string = '';
 
 @Output()
+    
 searchTextChanged: EventEmitter<string>=new EventEmitter<string>();
 
-onSearchTextChanged(){
+onSearchTextChanged()
+    {
   this.searchTextChanged.emit(this.enteredSearchValue)
 }
 
