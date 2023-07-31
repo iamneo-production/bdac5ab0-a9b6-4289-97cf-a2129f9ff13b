@@ -124,3 +124,7 @@ public class VehicleTestDTO {
         this.vehicleAvailableStatus = vehicleAvailableStatus;
     }
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4

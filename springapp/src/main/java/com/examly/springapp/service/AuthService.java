@@ -1,9 +1,23 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+//package com.example.login.service;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 package com.examly.springapp.service;
 
 import com.examly.springapp.model.User;
 import com.examly.springapp.dtomodels.LoginModel;
 import com.examly.springapp.dtomodels.UserModel;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import com.examly.springapp.dtomodels.UserTestDTO;
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+import com.examly.springapp.dtomodels.UserTestDTO;
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 import com.examly.springapp.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,26 +39,60 @@ public class AuthService {
     public String p;
     public String e;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public String saveUser(UserModel userModel){
+        boolean emailAlreadyExists = userRepository.existsUserByEmailId(userModel.getEmailId());
+=======
     public String saveUser(UserTestDTO userTestDTO){
         boolean emailAlreadyExists = userRepository.existsUserByEmail(userTestDTO.getEmail());
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+    public String saveUser(UserTestDTO userTestDTO){
+        boolean emailAlreadyExists = userRepository.existsUserByEmail(userTestDTO.getEmail());
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
         if(emailAlreadyExists){
             return ("Sorry, Email already exists!. Try using different emailId.");
 
         }
         try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+            userRepository.save(populateUser(userModel));
+=======
             userRepository.save(populateUser(userTestDTO));
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+            userRepository.save(populateUser(userTestDTO));
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
             return ("User created successfully");
         } catch (Exception e) {
             return ("User creation failed. Try Again");
         }
 
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public String saveAdmin(UserModel userModel){
+        boolean emailAlreadyExists = userRepository.existsUserByEmailId(userModel.getEmailId());
+=======
     public String saveAdmin(UserTestDTO userTestDTO){
         boolean emailAlreadyExists = userRepository.existsUserByEmail(userTestDTO.getEmail());
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+    public String saveAdmin(UserTestDTO userTestDTO){
+        boolean emailAlreadyExists = userRepository.existsUserByEmail(userTestDTO.getEmail());
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
         if(emailAlreadyExists){
             return ("Sorry, Email already exists!. Try using different emailId.");
         }
         try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+            userRepository.save(populateUser(userModel));
+=======
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
             userRepository.save(populateUser(userTestDTO));
             return ("User created successfully");
         } catch (Exception e) {
@@ -58,12 +106,28 @@ public class AuthService {
         }
         try {
             userRepository.save(populateUserTest(userTestDTO));
+<<<<<<< HEAD
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
             return ("User created successfully");
         } catch (Exception e) {
             return ("User creation failed. Try Again");
         }
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    protected User populateUser(UserModel userModel){
+        User user =new User();
+        user.setUserName(userModel.getUserName());
+        user.setUserRole(userModel.getUserRole());
+        user.setPassword(userModel.getPassword());
+        user.setMobileNumber(userModel.getMobileNumber());
+        user.setEmailId(userModel.getEmailId());
+=======
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
     protected User populateUserTest(UserTestDTO userTestDTO){
         User user =new User();
         user.setUsername(userTestDTO.getUsername());
@@ -81,6 +145,10 @@ public class AuthService {
         user.setPassword(userTestDTO.getPassword());
         user.setMobileNumber(userTestDTO.getMobileNumber());
         user.setEmail(userTestDTO.getEmail());
+<<<<<<< HEAD
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
         return user;
     }
 
@@ -91,7 +159,15 @@ public class AuthService {
 //        log.info(password);
 
         try{
+<<<<<<< HEAD
+<<<<<<< HEAD
+            User u1 = userRepository.findUserByEmailId(email);
+=======
             User u1 = userRepository.findUserByEmail(email);
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+            User u1 = userRepository.findUserByEmail(email);
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 //            p=u1.getPassword();
 //            e=u1.getEmailId();
 //            log.info(u1.getPassword().getClass().getSimpleName());
@@ -119,7 +195,15 @@ public class AuthService {
         String password= loginModel.getPassword();
 //        String userRole=loginModel.getUserRole().toLowerCase();
         try{
+<<<<<<< HEAD
+<<<<<<< HEAD
+            User u2 = userRepository.findUserByEmailId(email);
+=======
             User u2 = userRepository.findUserByEmail(email);
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+            User u2 = userRepository.findUserByEmail(email);
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
             len=u2.getPassword().length();
             if(!u2.equals(null)){
                 String x=u2.getUserRole().toLowerCase();
@@ -143,7 +227,15 @@ public class AuthService {
         String email= loginModel.getEmailId();
         String password= loginModel.getPassword();
 //        String userRole=loginModel.getUserRole().toLowerCase();
+<<<<<<< HEAD
+<<<<<<< HEAD
+            User u3 = userRepository.findUserByEmailId(email);
+=======
             User u3 = userRepository.findUserByEmail(email);
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+            User u3 = userRepository.findUserByEmail(email);
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 //            len=u2.getPassword().length();
             if(!u3.equals(null)) {
                 String x = u3.getUserRole().toLowerCase();

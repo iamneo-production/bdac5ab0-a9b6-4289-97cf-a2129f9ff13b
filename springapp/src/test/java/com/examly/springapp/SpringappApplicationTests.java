@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+package com.examly.springapp;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringappApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
+=======
 package com.examly.springapp;
 
 
@@ -74,3 +89,4 @@ class SpringappApplicationTests {
     }
 	
 }
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4

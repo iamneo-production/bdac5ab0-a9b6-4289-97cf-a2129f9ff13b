@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+//package com.example.login.model;
+=======
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 package com.examly.springapp.dtomodels;
 
 //import com.examly.springapp.model.User;
@@ -33,7 +40,15 @@ public class CustomUserDetails implements UserDetails {
 
     @Override
     public String getUsername() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+        return user.getEmailId();
+=======
         return user.getEmail();
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+        return user.getEmail();
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
     }
 
     @Override

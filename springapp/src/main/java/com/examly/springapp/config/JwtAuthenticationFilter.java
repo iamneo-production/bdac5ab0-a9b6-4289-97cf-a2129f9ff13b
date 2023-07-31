@@ -1,7 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+//package com.example.login.Config;
+package com.examly.springapp.config;
+
+
+=======
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 package com.examly.springapp.config;
 
 
 
+<<<<<<< HEAD
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 //import com.example.SpringSecurity.Service.CustomUserDetailsService;
 import com.examly.springapp.helper.JwtUtil;
 import com.examly.springapp.service.CustomUserDetailsService;

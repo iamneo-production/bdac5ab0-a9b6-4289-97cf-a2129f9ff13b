@@ -1,6 +1,18 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+// import javax.persistence.Entity;
+package com.examly.springapp.model;
+
+=======
 package com.examly.springapp.model;
 
 
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+package com.examly.springapp.model;
+
+
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,9 +30,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    private String userName;
+
+    private String emailId;
+=======
     private String username;
 
     private String email;
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+    private String username;
+
+    private String email;
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
 
     private String password;
     private String confirmPassword;
@@ -39,10 +63,23 @@ public class User {
 
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+    public User(String userName, String emailId,String password,String cpassword,String mobileNumber,String userRole,String dOB,String gender,String fname,String lname){
+        super();
+        this.userName = userName;
+        this.emailId = emailId;
+=======
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
     public User(String username, String email,String password,String mobileNumber,String userRole,String dOB,String gender,String fname,String lname){
         super();
         this.username = username;
         this.email = email;
+<<<<<<< HEAD
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
         this.password = password;
         this.mobileNumber = mobileNumber;
         this.userRole = userRole;
@@ -52,6 +89,13 @@ public class User {
         this.lname=lname;
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+=======
+=======
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
     public String getEmail() {
         return email;
     }
@@ -146,4 +190,9 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+<<<<<<< HEAD
 }
+>>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+}
+>>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
