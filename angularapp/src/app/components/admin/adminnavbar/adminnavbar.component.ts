@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 import { Component, OnInit } from '@angular/core';
 import { LoginauthService } from '../../auth/loginauth.service';
 
