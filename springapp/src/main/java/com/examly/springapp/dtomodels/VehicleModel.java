@@ -1,8 +1,11 @@
+
 package com.examly.springapp.dtomodels;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 import javax.persistence.Column;
 import javax.validation.constraints.NotEmpty;
@@ -21,10 +24,14 @@ public class VehicleModel {
     private String vehicleCapacity;
     private String vehicleDescription;
 
-    public VehicleModel() {
+    public VehicleModel() 
+    {
+        
     }
 
-    public VehicleModel(Long vehicleId, String vehicleName, String vehicleAvailableTiming, String vehicleCity, String vehicleUrl, String vehiclePrice, String vehicleCapacity, String vehicleDescription) {
+    public VehicleModel(Long vehicleId, String vehicleName, String vehicleAvailableTiming, 
+                        String vehicleCity, String vehicleUrl, String vehiclePrice, String vehicleCapacity, String vehicleDescription) {
+        
         this.vehicleId = vehicleId;
         this.vehicleName = vehicleName;
         this.vehicleAvailableTiming = vehicleAvailableTiming;
@@ -33,53 +40,66 @@ public class VehicleModel {
         this.vehiclePrice = vehiclePrice;
         this.vehicleCapacity = vehicleCapacity;
         this.vehicleDescription = vehicleDescription;
+        
     }
 
-    public Long getVehicleId() {
+    public Long getVehicleId()
+    {
         return vehicleId;
     }
 
-    public void setVehicleId(Long vehicleId) {
+    public void setVehicleId(Long vehicleId)
+    {
         this.vehicleId = vehicleId;
     }
 
-    public String getVehicleName() {
+    public String getVehicleName() 
+    {
         return vehicleName;
     }
 
-    public void setVehicleName(String vehicleName) {
+    public void setVehicleName(String vehicleName)
+    {
         this.vehicleName = vehicleName;
     }
 
-    public String getVehicleAvailableTiming() {
+    public String getVehicleAvailableTiming()
+    {
         return vehicleAvailableTiming;
     }
 
-    public void setVehicleAvailableTiming(String vehicleAvailableTiming) {
+    public void setVehicleAvailableTiming(String vehicleAvailableTiming)
+    {
         this.vehicleAvailableTiming = vehicleAvailableTiming;
     }
 
-    public String getVehicleCity() {
+    public String getVehicleCity()
+    {
         return vehicleCity;
     }
 
-    public void setVehicleCity(String vehicleCity) {
+    public void setVehicleCity(String vehicleCity)
+    {
         this.vehicleCity = vehicleCity;
     }
 
-    public String getVehicleUrl() {
+    public String getVehicleUrl()
+    {
         return vehicleUrl;
     }
 
-    public void setVehicleUrl(String vehicleUrl) {
+    public void setVehicleUrl(String vehicleUrl)
+    {
         this.vehicleUrl = vehicleUrl;
     }
 
-    public String getVehiclePrice() {
+    public String getVehiclePrice() 
+    {
         return vehiclePrice;
     }
 
-    public void setVehiclePrice(String vehiclePrice) {
+    public void setVehiclePrice(String vehiclePrice)
+    {
         this.vehiclePrice = vehiclePrice;
     }
 
@@ -91,11 +111,14 @@ public class VehicleModel {
         this.vehicleCapacity = vehicleCapacity;
     }
 
-    public String getVehicleDescription() {
+    public String getVehicleDescription()
+    {
         return vehicleDescription;
     }
 
-    public void setVehicleDescription(String vehicleDescription) {
+    public void setVehicleDescription(String vehicleDescription)
+    {
         this.vehicleDescription = vehicleDescription;
     }
+    
 }
