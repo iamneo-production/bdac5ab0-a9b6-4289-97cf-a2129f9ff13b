@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //package com.example.login.controller;
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 package com.examly.springapp.controller;
 
 import javax.persistence.Entity;
@@ -9,9 +12,13 @@ import java.util.List;
 
 import com.examly.springapp.model.Vehicle;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import com.examly.springapp.dtomodels.VehicleTestDTO;
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+import com.examly.springapp.dtomodels.VehicleTestDTO;
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 import com.examly.springapp.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,9 +33,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import org.springframework.web.bind.annotation.RequestParam; 
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+import org.springframework.web.bind.annotation.RequestParam; 
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 import java.util.Optional;
 //import com.example.demo.model.Vehicle;
 //import com.example.demo.service.VehicleService;
@@ -58,6 +69,7 @@ public class VehicleController {
         //return vehicleService.saveVehicle(vehicles);
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     @GetMapping("/admin/vehicle/{vehicleId}")
     public ResponseEntity<Vehicle> getVehicleById(@PathVariable Long vehicleId){
@@ -70,6 +82,15 @@ public class VehicleController {
     public Optional<Vehicle> getVehicleById(@PathVariable String vehicleId){
         return vehicleService.getVehicleById(vehicleId);
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+    
+
+    @GetMapping("/admin/vehicle/{vehicleId}")
+    public Optional<Vehicle> getVehicleById(@PathVariable Long vehicleId){
+        System.out.println(vehicleId.getClass());
+        //long vehicleId = Long.parseLong(id);
+        return vehicleService.getVehicleById(vehicleId);
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
     }
 
     @PostMapping("/admin/saveVehicle")
@@ -80,6 +101,7 @@ public class VehicleController {
     }
 
     @PutMapping("/admin/editVehicle/{vehicleId}")
+<<<<<<< HEAD
 <<<<<<< HEAD
     public Vehicle editVehicle(@PathVariable Long vehicleId,@RequestBody Vehicle vehicledetails){
 
@@ -93,12 +115,21 @@ public class VehicleController {
 
 =======
     public Vehicle editVehicle(@PathVariable String vehicleId,@RequestBody Vehicle vehicledetails){
+=======
+    public Vehicle editVehicle(@PathVariable Long vehicleId,@RequestBody Vehicle vehicledetails){
+        System.out.println(vehicleId.getClass());
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
         return vehicleService.editVehicle(vehicleId,vehicledetails);
     }
 
     
     @DeleteMapping("/admin/deleteVehicle/{vehicleId}")
+<<<<<<< HEAD
     public void deleteVehicle(@PathVariable String vehicleId) {
+=======
+    public void deleteVehicle(@PathVariable Long vehicleId) {
+        System.out.println(vehicleId.getClass());
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
         vehicleService.deleteVehicle(vehicleId);
     }
 
@@ -110,8 +141,13 @@ public class VehicleController {
     }
     
     @PutMapping("/admin/productEdit")
+<<<<<<< HEAD
     public Vehicle editVehicleById(@RequestParam("vehicleID") String vehicleID,@RequestBody Vehicle vehicle){
 
+=======
+    public Vehicle editVehicleById(@RequestParam("vehicleID") Long vehicleID,@RequestBody Vehicle vehicle){
+        System.out.println(vehicleID.getClass());
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
         return vehicleService.editVehicle(vehicleID,vehicle);
     }
 
@@ -120,7 +156,10 @@ public class VehicleController {
         return vehicleService.getVehicleAll();
     }
 
+<<<<<<< HEAD
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 //    @Bean
 //    public WebMvcConfigurer crosConfigurer(){
 //        return new WebMvcConfigurer() {

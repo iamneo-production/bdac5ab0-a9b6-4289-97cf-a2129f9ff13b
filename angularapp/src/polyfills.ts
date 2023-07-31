@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -62,6 +65,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+<<<<<<< HEAD
 =======
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
@@ -127,3 +131,5 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * APPLICATION IMPORTS
  */
 >>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4

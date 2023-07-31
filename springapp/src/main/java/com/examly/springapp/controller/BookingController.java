@@ -1,17 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //package com.example.login.controller;
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 package com.examly.springapp.controller;
 
 
 import com.examly.springapp.model.Booking;
 import com.examly.springapp.service.BookingService;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 import java.util.List;
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+
+import java.util.List;
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,9 +29,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.List;
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 
 
 @CrossOrigin(origins ="*")
@@ -63,6 +74,7 @@ public class BookingController {
 
     @DeleteMapping("/user/deletebooking/{bookingid}")
 <<<<<<< HEAD
+<<<<<<< HEAD
     public ResponseEntity<String> deleteBooking(@PathVariable("bookingid") long bookingid){
         bookingService.deleteBooking(bookingid);
         return new ResponseEntity<String>("Booking deleted successfully!.", HttpStatus.OK);
@@ -71,6 +83,11 @@ public class BookingController {
         bookingService.deleteBooking(bookingid);
 
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+    public void deleteBooking(@PathVariable("bookingid") long bookingid){
+        bookingService.deleteBooking(bookingid);
+
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
     }
 //    @Bean
 //    public WebMvcConfigurer crosConfigurer(){

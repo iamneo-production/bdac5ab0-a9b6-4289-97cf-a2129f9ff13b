@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
@@ -32,6 +35,7 @@ module.exports = function (config) {
     restartOnFileChange: true
   });
 };
+<<<<<<< HEAD
 =======
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
@@ -90,3 +94,5 @@ module.exports = function (config) {
   });
 };
 >>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4

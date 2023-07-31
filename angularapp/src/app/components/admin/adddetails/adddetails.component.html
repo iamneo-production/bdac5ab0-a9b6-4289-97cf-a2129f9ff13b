@@ -1,0 +1,14 @@
+<router-outlet></router-outlet>
+
+    <p>
+        <span class="h5">Add</span><br><br>
+        <input type="text" id="addName" [(ngModel)]="vehicles.vehicleName" name="vehicleName" placeholder="Enter the Name" size="50" ><br><br>
+        <input type="text" id="addTiming" [(ngModel)]="vehicles.vehicleAvailableTiming" name="vehicleAvailableTiming" placeholder="Enter the Available Timing" size="50"><br><br>
+        <input type="text" id="addCity"  [(ngModel)]="vehicles.vehicleAddress" name="vehicleCity" placeholder="Enter the city" size="50"><br><br>
+        <input type="url" id="addImageUrl" [(ngModel)]="vehicles.vehicleImageURL" name="vehicleUrl" placeholder="Enter the Image Url" size="50"><br><br>
+        <input type="text" id="addPrice" [(ngModel)]="vehicles.price" name="vehiclePrice" placeholder="Enter the fair per person" size="50"><br><br>
+        <input type="text" id="Boatcapacity"  [(ngModel)]="vehicles.vehicleCapacity" name="vehicleCapacity" placeholder="Enter no of capacity" size="50"><br><br>
+        <textarea  id="addDescription" [(ngModel)]="vehicles.vehicleDescription" name="vehicleDescription" placeholder="Description about product" cols="52" rows="4"></textarea><br><br>
+        <button type="button" id="addButton" (click)="onSubmit()" class="btn btn-secondary btn-lg" style="background-color: #000000" class="text-white bg-dark">Add</button>
+    </p>
+

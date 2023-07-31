@@ -1,11 +1,21 @@
 package com.examly.springapp.model;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+
+
+
+
+
+
+
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,24 +50,33 @@ public class Booking {
 
     @Column(name = "from_date")
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
     private String fromDate;
 
     @Column(name = "to_date")
     private String toDate;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
     @Column(name = "from_time")
     private String startTime;
 
     @Column(name = "to_time")
     private String endTime;
 
+<<<<<<< HEAD
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
     @Column(name = "total_price")
     private String totalPrice;
 
@@ -67,9 +86,13 @@ public class Booking {
     private Long vehicleId;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 //    private String tPrice;
 //
 //    public String gettPrice() {
@@ -77,7 +100,10 @@ public class Booking {
 //    }
 //
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 
     public String getStartTime() {
         return startTime;
@@ -96,7 +122,10 @@ public class Booking {
     }
 
 
+<<<<<<< HEAD
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 //    public void settPrice(String tPrice) {
 //        this.tPrice = tPrice;
 //    }
@@ -175,8 +204,12 @@ public class Booking {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 =======
 }
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+}
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4

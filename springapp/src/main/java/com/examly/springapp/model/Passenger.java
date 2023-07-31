@@ -1,13 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //package com.example.login.entity;
 package com.examly.springapp.model;
 
 =======
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 package com.examly.springapp.model;
 
 
 
+<<<<<<< HEAD
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
@@ -36,6 +42,7 @@ public class Passenger {
     private Long bookingId;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public Passenger() {
     }
 
@@ -46,12 +53,17 @@ public class Passenger {
         this.age = age;
         this.gender = gender;
 =======
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
     public Long getBookingId() {
         return bookingId;
     }
 
     public void setBookingId(Long bookingId) {
+<<<<<<< HEAD
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
         this.bookingId = bookingId;
     }
 
@@ -87,9 +99,13 @@ public class Passenger {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+}
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 //    public String getG() {
 //        return g;
 //    }
@@ -98,6 +114,9 @@ public class Passenger {
 //        this.g = g;
 //    }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4

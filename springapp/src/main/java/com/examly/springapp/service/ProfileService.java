@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //package com.example.login.service;
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 package com.examly.springapp.service;
 
 import com.examly.springapp.model.User;

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
@@ -34,6 +37,7 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span').textContent).toContain('angularapp app is running!');
   });
 });
+<<<<<<< HEAD
 =======
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -71,3 +75,5 @@ describe('AppComponent', () => {
   });
 });
 >>>>>>> d6e745b12f0d7edfee44d4d32c67e0b84b1524b6
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4

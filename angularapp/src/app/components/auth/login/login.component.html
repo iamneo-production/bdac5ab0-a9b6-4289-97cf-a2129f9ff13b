@@ -1,1 +1,22 @@
-<p>login works!</p>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>login</h1>
+        </div>
+        <div class="main">
+            <form [formGroup]="loginPage" (submit)="onSubmit()">
+                <span>
+                    <i></i>
+                    <input class="" required type="email" id="email" placeholder="Enter Email" formControlName="emailId">
+                </span><br>
+                <span>
+                    <i></i>
+                    <input  class="" type="password" id="password" placeholder="Enter Password" formControlName="password">
+                </span><br>
+                <button class=""  style="text-align: center;" id="loginButton">Login</button> <br>
+                <label for="" style="color: aliceblue;">New User/Admin? </label><a href="#" routerLink="/signup" id="signupLink">Sign Up</a> 
+            </form>
+        </div>
+    </div>
+</body>
+

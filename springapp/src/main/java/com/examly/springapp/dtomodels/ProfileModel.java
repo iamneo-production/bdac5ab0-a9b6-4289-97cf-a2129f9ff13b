@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //package com.example.login.model;
 =======
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 package com.examly.springapp.dtomodels;
 
 import lombok.AllArgsConstructor;
@@ -9,6 +12,10 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 public class ProfileModel {
 
 
@@ -19,11 +26,14 @@ public class ProfileModel {
     private String mobileNumber;
     private String userRole;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private String dob;
     private String gender;
     private String fname;
     private String lname;
 =======
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
     private String dOB;
     private String gender;
     private String fname;
@@ -108,5 +118,8 @@ public class ProfileModel {
     public void setLname(String lname) {
         this.lname = lname;
     }
+<<<<<<< HEAD
 >>>>>>> 510b563e994730f1c1d54d772bd339e920081a14
+=======
+>>>>>>> 4aafdc273be4895981963330f0040cf86eb0b9c4
 }
