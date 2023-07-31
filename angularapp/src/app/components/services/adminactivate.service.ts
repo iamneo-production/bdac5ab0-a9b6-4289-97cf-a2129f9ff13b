@@ -8,6 +8,7 @@ import { AuthService } from '../auth/auth.service';
   providedIn: 'root'
   
 })
+  
 export class AdminactivateService {
 
   constructor(private log:LoginauthService, private route: Router,private auth:AuthService) { }
