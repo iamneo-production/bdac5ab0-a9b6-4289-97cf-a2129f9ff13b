@@ -1,7 +1,9 @@
 package com.examly.springapp.controller;
 
+
 import javax.persistence.Entity;
 import java.util.List;
+
 
 import com.examly.springapp.model.Vehicle;
 import com.examly.springapp.dtomodels.VehicleTestDTO;
@@ -28,19 +30,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+
 @CrossOrigin(origins ="*")
 @RestController
 @RequestMapping
 
-public class VehicleController {
+
+    public class VehicleController {
     @Autowired
     private VehicleService vehicleService;
 
+    
     @GetMapping("/admin/vehicle")
     public List<Vehicle> getVehicleAll(){
         return vehicleService.getVehicleAll();
     }
 
+    
     @PostMapping("/admin/addVehicle")
     public ResponseEntity <Vehicle> bookVehicle( @RequestBody Vehicle vehicles){
         Vehicle booked = vehicleService.bookVehicle(vehicles);
@@ -49,12 +55,15 @@ public class VehicleController {
     }
     
 
+    
     @GetMapping("/admin/vehicle/{vehicleId}")
     public Optional<Vehicle> getVehicleById(@PathVariable Long vehicleId){
         System.out.println(vehicleId.getClass());
         //long vehicleId = Long.parseLong(id);
         return vehicleService.getVehicleById(vehicleId);
     }
+
+    
 
     @PostMapping("/admin/saveVehicle")
     public ResponseEntity <Vehicle> saveVehicle( @RequestBody Vehicle vehicledetails){
@@ -63,6 +72,8 @@ public class VehicleController {
         //return vehicleService.saveVehicle(vehicledetails);
     }
 
+
+    
     @PutMapping("/admin/editVehicle/{vehicleId}")
     public Vehicle editVehicle(@PathVariable Long vehicleId,@RequestBody Vehicle vehicledetails){
         System.out.println(vehicleId.getClass());
@@ -76,6 +87,7 @@ public class VehicleController {
         vehicleService.deleteVehicle(vehicleId);
     }
 
+    
     @PostMapping("/admin/addProduct")
     public Vehicle addVehicle( @RequestBody Vehicle vehicle){
         //Vehicle booked = 
@@ -83,16 +95,20 @@ public class VehicleController {
         //return vehicleService.saveVehicle(vehicles);
     }
     
+    
     @PutMapping("/admin/productEdit")
     public Vehicle editVehicleById(@RequestParam("vehicleID") Long vehicleID,@RequestBody Vehicle vehicle){
         System.out.println(vehicleID.getClass());
         return vehicleService.editVehicle(vehicleID,vehicle);
     }
 
+    
     @GetMapping("/admin")
     public List<Vehicle> getAllVehicle(){
         return vehicleService.getVehicleAll();
     }
+
+    
 
 //    @Bean
 //    public WebMvcConfigurer crosConfigurer(){
