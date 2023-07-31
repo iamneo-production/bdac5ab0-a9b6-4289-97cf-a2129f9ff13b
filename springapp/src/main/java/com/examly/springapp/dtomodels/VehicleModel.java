@@ -30,7 +30,9 @@ public class VehicleModel {
     }
 
     public VehicleModel(Long vehicleId, String vehicleName, String vehicleAvailableTiming, 
-                        String vehicleCity, String vehicleUrl, String vehiclePrice, String vehicleCapacity, String vehicleDescription) {
+                        String vehicleCity, String vehicleUrl, String vehiclePrice, 
+                        String vehicleCapacity, String vehicleDescription)
+    {
         
         this.vehicleId = vehicleId;
         this.vehicleName = vehicleName;
