@@ -1,3 +1,7 @@
+
+
+
+
 import { Component, OnInit } from '@angular/core';
 import { Addvehicle, bookingDetails } from '../../datatypes';
 import { BookingdetailsService } from '../userservices/bookingdetails.service';
