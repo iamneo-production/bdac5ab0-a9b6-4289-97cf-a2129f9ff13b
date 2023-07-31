@@ -1,6 +1,3 @@
-
-
-
 package com.examly.springapp.controller;
 
 import javax.persistence.Entity;
