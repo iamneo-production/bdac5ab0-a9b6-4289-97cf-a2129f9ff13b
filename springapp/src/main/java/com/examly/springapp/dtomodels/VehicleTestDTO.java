@@ -1,7 +1,3 @@
-
-
-
-
 package com.examly.springapp.dtomodels;
 
 import lombok.AllArgsConstructor;
