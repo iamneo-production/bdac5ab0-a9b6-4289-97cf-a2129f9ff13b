@@ -1,9 +1,13 @@
+
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
+  
   name: 'filter'
+  
 })
-export class FilterPipe implements PipeTransform {
+
+  export class FilterPipe implements PipeTransform {
 
   transform(value: any, filterString: string) {
     
@@ -14,14 +18,18 @@ export class FilterPipe implements PipeTransform {
 
     const users = [];
     
-    for (const user of value) {
+    for (const user of value)
+      {
       if(user['vehicleName'].toLowerCase().includes (filterString.toLowerCase()) || 
          user['vehicleAddress'].toLowerCase().includes (filterString.toLowerCase) ||
          user["price"].toLowerCase().includes (filterString.toLowerCase())) {
          users.push(user);
       }
+        
     }
+    
     return users;
+    
   }
 
 
