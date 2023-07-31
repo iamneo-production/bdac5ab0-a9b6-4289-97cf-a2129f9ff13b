@@ -8,7 +8,7 @@ import { AddBookingComponent } from './components/user/add-booking/add-booking.c
 
 import { UserbookingsComponent } from './components/user/userbookings/userbookings.component';
 import { UserhomepageComponent } from './components/user/userhomepage/userhomepage.component';
-import { UserreviewComponent } from './components/user/userreview/userreview.component';
+import { UserreviewsComponent } from './components/user/userreviews/userreviews.component';
 
 import { LoginComponent } from './components/auth/login/login.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
@@ -62,7 +62,7 @@ import { MatRadioModule } from '@angular/material/radio';
     AddBookingComponent,
     UserbookingsComponent,
     UserhomepageComponent,
-    UserreviewComponent,
+    UserreviewsComponent,
     LoginComponent,
     SignupComponent,
     AdddetailsComponent,
