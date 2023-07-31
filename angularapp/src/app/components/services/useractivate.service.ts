@@ -1,19 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import { Injectable } from '@angular/core';
 import { LoginauthService } from '../auth/loginauth.service';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
